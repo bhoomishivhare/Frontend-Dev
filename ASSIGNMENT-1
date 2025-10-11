@@ -1,0 +1,122 @@
+Ans-1:
+Frontend (Client-Side)  ->	Everything users see and interact with on a website. Focuses on design, layout, and user experience.	HTML, CSS, JavaScript, React, Angular, Vue.js	When you open Amazon, the homepage layout, buttons, product cards, and animations are part of the frontend.
+Backend (Server-Side)->	Handles the logic, data processing, and communication with the database. Users don’t see this part.	Node.js, Java, Python (Django, Flask), PHP, Ruby, .NET	When you log in, the backend verifies your email/password in the database before giving access.
+Full-Stack Developer->Works on both frontend and backend, connecting the UI with the server/database.	Combines frontend + backend skills	A full-stack developer can build an entire site like Netflix — UI + login system + data storage.
+
+Ans-2:
+     ┌──────────────┐
+     │   Web Client │  
+     │(e.g., Chrome)│
+     └──────┬───────┘
+            │   HTTP Request
+            ▼
+     ┌──────────────┐
+     │  Web Server  │
+     │ (e.g., Nginx,│
+     │   Apache)    │
+     └──────┬───────┘
+            │   Queries Database
+            ▼
+     ┌──────────────┐
+     │   Database   │
+     │ (e.g., MySQL,│
+     │   MongoDB)   │
+     └──────────────┘
+Ans-3:
+User enters a URL (e.g., https://www.wikipedia.org).
+
+DNS lookup: The browser finds the IP address of the web server hosting the site.
+
+HTTP/HTTPS Request: The browser sends a request to the server for the web page.
+
+Server Response: The server returns an HTML file (and possibly CSS, JS, images).
+
+Rendering Process:
+
+Browser reads HTML → builds DOM (Document Object Model).
+
+Downloads and applies CSS → builds CSSOM.
+
+Executes JavaScript → manipulates the DOM.
+
+Finally, renders the page on the screen.
+
+ Example:
+When you open YouTube, the browser:
+
+Fetches HTML → structure of the page
+
+Fetches CSS → colors and layout
+
+Executes JS → plays video and handles likes/comments dynamically.
+
+Ans-4:
+Tools Required for a Web Development Environment
+VS Code editor used to write and organize your project files.
+Web Browsers (e.g., Chrome, Firefox)	Used to run and test your website.
+Node.js & npm	Allows you to run JavaScript outside the browser and manage packages.
+Git & GitHub	Version control and collaboration — helps track code changes.
+Live Server Extension (VS Code)	Automatically reloads your website when you save changes.
+Terminal/Command Prompt	Used to run commands, servers, and installations.
+
+Ans-5:
+A web server is software (and sometimes hardware) that receives HTTP requests from clients (browsers) and sends back web content (HTML, CSS, images, etc.).
+Examples of Web Servers:
+
+Apache HTTP Server — open-source, widely used.
+
+Nginx — known for speed and handling multiple requests.
+
+Microsoft IIS — used with Windows servers.
+
+Node.js (Express) — JavaScript-based server for dynamic sites.
+
+LiteSpeed — optimized for high-performance sites.
+Example:
+When you open amazon.in, your browser connects to Amazon’s Nginx servers, which send back the HTML and data to load the page.
+
+
+Ans-6:
+Frontend Developer	Designs and implements the website’s visual layout and interactivity using HTML, CSS, JS.
+Backend Developer	Manages server logic, APIs, and database communication (handles authentication, data processing).
+Database Administrator (DBA)	Creates and maintains the database, ensures data security, backups, and performance tuning.
+
+Ans-8:
+Static Website	Content is fixed and same for every user. Created with HTML, CSS only.	A portfolio website (like “about me” pages) — e.g., https://info.html
+Dynamic Website	Content changes based on user actions or data from database. Requires backend logic.	YouTube, Instagram, Amazon — content loads dynamically for each user.
+
+Ans-9:
+Five Popular Web Browsers & Rendering Engines
+
+Google Chrome	Blink	Fast, modern, used in many Chromium-based browsers.
+Mozilla Firefox	Gecko	Open-source, highly customizable.
+Microsoft Edge	Blink	Based on Chromium, faster than old EdgeHTML.
+Safari (Apple)	WebKit	Optimized for Apple devices.
+Opera	Blink	Uses same engine as Chrome, adds built-in VPN & tools.
+
+Rendering Engine Difference:
+A rendering engine reads HTML, CSS, and JS and draws the webpage.
+Different engines interpret styles slightly differently — that’s why sites may look a bit different in Chrome vs Safari.
+
+Ans-10:
+ ┌────────────┐       HTTP Request       ┌──────────────┐
+ │   Client   │  ─────────────────────▶  │  Web Server │
+ │ (Browser)  │                          │ (Node, Nginx)│
+ └─────┬──────┘                          └──────┬───────┘
+       │                                      │
+       │            API Calls                 │
+       │                                      ▼
+       │                              ┌────────────── ┐
+       │                              │   Database    │
+       │                              │(MySQL,MongoDB)│
+       │                              └────────────── ┘
+       │
+       │      HTTP Response (HTML/CSS/JS)
+       ▼
+ ┌────────────┐
+ │   Client   │ (Page Displayed)
+ └────────────┘
+
+
+
+
