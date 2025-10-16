@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Frameset Layout</title>
+</head>
+<!-- 
+    Using frameset and frame tags to divide the browser window.
+    Top frame: Navigation links
+    Bottom frame: Welcome message
+-->
+<frameset rows="100px,*">
+    <!-- Top frame: Navigation -->
+    <frame src="navigation.html" name="topFrame" title="Navigation Frame">
+    
+    <!-- Bottom frame: Welcome Message -->
+    <frame src="welcome.html" name="bottomFrame" title="Welcome Frame">
+    
+    <noframes>
+        <body>
+            Your browser does not support frames.
+        </body>
+    </noframes>
+</frameset>
+
+</html>
