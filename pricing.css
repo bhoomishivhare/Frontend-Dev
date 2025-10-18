@@ -1,0 +1,74 @@
+/* ===== pricing.css ===== */
+body {
+  font-family: Arial, sans-serif;
+  padding: 2rem;
+  background: #f4f4f4;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 2rem;
+}
+
+/* Flex container */
+.pricing-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Pricing plan cards */
+.plan {
+  background: white;
+  padding: 2rem;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  width: 250px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.plan:hover {
+  transform: scale(1.05);
+  background: #e0f7fa;
+}
+
+.plan h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.plan ul {
+  list-style: none;
+  margin-bottom: 1rem;
+  padding-left: 0;
+}
+
+.plan ul li {
+  padding: 0.5rem 0;
+}
+
+.plan .price {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.plan .btn {
+  display: inline-block;
+  text-decoration: none;
+  background: #004d7a;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.plan .btn:hover {
+  background: #006994;
+}
+
+/* Highlight popular plan */
+.plan.popular {
+  border: 2px solid #ffbf00;
+  background: #fff7e6;
+}
