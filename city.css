@@ -1,0 +1,70 @@
+/* ===== city.css ===== */
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(to right, #004d7a, #00b4d8);
+  color: white;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1rem;
+  font-weight: bold;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Sections ===== */
+.section {
+  min-height: 100vh;
+  padding: 50px 10%;
+  color: #fff;
+}
+
+.history {
+  background: url('history-bg.jpg') center/cover no-repeat fixed;
+}
+
+.culture {
+  background: radial-gradient(circle, #ff7e5f, #feb47b);
+  color: #333;
+}
+
+.tourism {
+  background: url('tourism-bg.jpg') center/cover no-repeat fixed;
+}
+
+/* Headings */
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+/* Paragraph */
+.section p {
+  font-size: 1.1rem;
+  max-width: 700px;
+}
+
+/* Footer */
+footer {
+  background: #022b3a;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
