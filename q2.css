@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #f2f2f2;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #ccc;
+  text-align: center;
+  padding: 30px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 900px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
