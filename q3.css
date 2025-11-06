@@ -1,0 +1,54 @@
+/* Global Reset and Typography */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+/* Fixed header and footer */
+header, footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  padding: 10px 0;
+  z-index: 10;
+}
+
+header {
+  top: 0;
+}
+
+footer {
+  bottom: 0;
+}
+
+/* Add space so content isn't hidden behind fixed header/footer */
+main {
+  margin-top: 70px;
+  margin-bottom: 60px;
+}
+
+/* Linear Gradient Section */
+.linear-gradient {
+  height: 80vh;
+  background: linear-gradient(to right, #ff6a00, #ee0979);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Radial Gradient Section with parallax-like effect */
+.radial-gradient {
+  height: 80vh;
+  background: radial-gradient(circle, #00c6ff, #0072ff);
+  background-attachment: fixed; /* Parallax-like effect */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
