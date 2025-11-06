@@ -1,0 +1,61 @@
+/* General page styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  text-align: center;
+}
+
+header, footer {
+  background-color: #222;
+  color: white;
+  padding: 15px 0;
+}
+
+/* Flexbox container to center boxes */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 50px 0;
+}
+
+/* Basic box structure */
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: #90caf9;
+  border: 5px solid #1565c0;
+  padding: 20px;
+  margin: 20px;
+  box-sizing: content-box; /* Default */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+}
+
+/* Border-box version */
+.border-box {
+  background-color: #81c784;
+  border: 5px solid #2e7d32;
+  box-sizing: border-box; /* Demonstrating border-box */
+}
+
+/* Description text section */
+.description {
+  width: 80%;
+  margin: 0 auto 40px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  text-align: justify;
+}
+
+mark {
+  background-color: #ffeb3b;
+}
