@@ -1,0 +1,58 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #f8f9fa, #e3f2fd);
+    margin: 0;
+    color: #333;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+/* Flexbox Layout */
+.effects-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+/* Card Design */
+.card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    width: 220px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+}
+
+/* Card Hover Effects */
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling */
+.card img {
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    transition: transform 0.4s ease;
+}
+
+.card:hover img {
+    transform: rotate(5deg) scale(1.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #222;
+    color: white;
+}
