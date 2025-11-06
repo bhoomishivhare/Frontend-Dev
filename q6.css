@@ -1,0 +1,76 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f0f4f8;
+    color: #333;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+/* Flexbox Centering for Animations */
+.animation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+    height: 80vh;
+}
+
+/* Moving Box Animation */
+.box {
+    width: 100px;
+    height: 100px;
+    background: #007bff;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    animation: moveBox 3s ease-in-out infinite alternate;
+}
+
+@keyframes moveBox {
+    from { transform: translateX(0); }
+    to { transform: translateX(200px); }
+}
+
+/* Bouncing Ball Animation */
+.ball {
+    width: 60px;
+    height: 60px;
+    background: #28a745;
+    border-radius: 50%;
+    animation: bounce 1.5s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-100px); }
+}
+
+/* Color-Changing Text Animation */
+.text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    animation: colorChange 3s linear infinite;
+}
+
+@keyframes colorChange {
+    0% { color: #007bff; }
+    50% { color: #ff4081; }
+    100% { color: #007bff; }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #222;
+    color: white;
+    padding: 10px;
+}
