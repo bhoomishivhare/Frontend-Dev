@@ -1,0 +1,73 @@
+/* Basic page setup */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Navbar styling */
+.navbar {
+  background-color: #222;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin: 0;
+}
+
+.navbar a {
+  display: block;
+  padding: 15px 25px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease; /* Smooth hover transition */
+}
+
+/* Hover and active effects */
+.navbar a:hover {
+  background-color: #007bff;
+  border-bottom: 3px solid #0056b3;
+}
+
+.navbar a.active {
+  background-color: #0056b3;
+  border-bottom: 3px solid #007bff;
+}
+
+/* Responsive layout - stack links below 700px */
+@media (max-width: 700px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar a {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Content area */
+.content {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+/* Footer styling */
+footer {
+  text-align: center;
+  padding: 15px 0;
+  background-color: #222;
+  color: white;
+}
