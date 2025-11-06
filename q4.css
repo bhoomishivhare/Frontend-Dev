@@ -1,0 +1,79 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f8fafc;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: #0077cc;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Section spacing */
+section {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Element Selector Example */
+p {
+    color: #444;
+}
+
+/* Class Selector Example */
+.highlight {
+    background: #e0f7fa;
+    padding: 10px;
+    border-left: 4px solid #00acc1;
+}
+
+/* ID Selector Example */
+#unique {
+    background: #ffecb3;
+    border-left: 4px solid #ffb300;
+    padding: 10px;
+}
+
+/* Attribute Selectors */
+/* Selects links starting with "https" */
+a[href^="https"] {
+    color: green;
+}
+
+/* Selects links starting with "http" */
+a[href^="http:"] {
+    color: red;
+}
+
+/* Combinator Selectors */
+
+/* Child Selector (>) */
+.parent > p {
+    color: blue;
+}
+
+/* Adjacent Sibling Selector (+) */
+.parent span + p {
+    font-weight: bold;
+    color: purple;
+}
+
+/* General Sibling Selector (~) */
+.parent p ~ p {
+    font-style: italic;
+    color: teal;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #222;
+    color: white;
+}
