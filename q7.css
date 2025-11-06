@@ -1,0 +1,93 @@
+/* Basic Page Setup */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #f8fafc, #dfe9f3);
+    margin: 0;
+    color: #333;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+/* Main Container */
+.ui-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+/* Card Container */
+.ui-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 320px;
+}
+
+/* Search Bar */
+.search-bar {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    margin-bottom: 1rem;
+    transition: border-color 0.3s ease;
+}
+.search-bar:focus {
+    border-color: #007bff;
+}
+
+/* Button Styles */
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0 5px;
+}
+
+/* Primary and Secondary Buttons */
+.primary {
+    background: #007bff;
+    color: white;
+}
+.primary:hover {
+    background: #0056b3;
+}
+.secondary {
+    background: #28a745;
+    color: white;
+}
+.secondary:hover {
+    background: #1e7e34;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    margin-top: 1rem;
+}
+select {
+    padding: 8px;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    transition: border-color 0.3s ease;
+}
+select:focus {
+    border-color: #007bff;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #222;
+    color: white;
+}
