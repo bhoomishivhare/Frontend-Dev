@@ -1,0 +1,57 @@
+/* General page setup */
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background-color: #fafafa;
+  color: #333;
+  line-height: 1.6;
+}
+
+header, footer {
+  text-align: center;
+  background-color: #222;
+  color: white;
+  padding: 15px 0;
+}
+
+/* Article Styling */
+article {
+  width: 80%;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  font-size: 1.1em;
+}
+
+/* Text alignment and spacing */
+p {
+  text-align: justify;
+  letter-spacing: 0.5px;
+}
+
+/* Styling text emphasis tags */
+mark {
+  background-color: #ffeb3b;
+  color: #000;
+}
+
+strong {
+  color: #007bff;
+}
+
+em {
+  color: #d63384;
+}
+
+/* Pseudo-elements for decorative emphasis */
+p::first-letter {
+  font-size: 2em;
+  font-weight: bold;
+  color: #ff5722;
+}
+
+p::first-line {
+  font-style: italic;
+}
