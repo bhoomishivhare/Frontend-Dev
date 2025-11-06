@@ -1,0 +1,86 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f2f4f7;
+    color: #333;
+}
+
+/* Center all examples using Flexbox */
+.examples {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+.example {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    margin: 10px;
+}
+
+/* Pseudo-Classes Demonstration */
+
+/* :hover */
+a {
+    text-decoration: none;
+    color: #0077cc;
+    background: #e3f2fd;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+a:hover {
+    background: #0077cc;
+    color: white;
+}
+
+/* :active */
+button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+button:active {
+    background: #2e7d32;
+}
+
+/* :focus */
+input {
+    padding: 8px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+input:focus {
+    border-color: #0077cc;
+}
+
+/* :nth-child() */
+ul {
+    list-style: none;
+    padding: 0;
+}
+li:nth-child(2n) {
+    background: #f0f0f0;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #222;
+    color: white;
+}
