@@ -1,0 +1,50 @@
+/* Basic page setup */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Center boxes using Flexbox */
+.container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: #fafafa;
+}
+
+/* Common box styling */
+.box {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+  overflow: auto; /* Demonstrate overflow */
+}
+
+/* Individual box sizes */
+.box1 {
+  width: 150px;
+  height: 150px;
+  background-color: #007bff;
+}
+
+.box2 {
+  width: 20%;
+  height: 200px;
+  min-height: 100px;
+  background-color: #28a745;
+}
+
+.box3 {
+  width: 15em;
+  height: 40vh;
+  max-width: 250px;
+  background-color: #ff5733;
+}
