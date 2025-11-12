@@ -1,0 +1,6 @@
+.alert {
+  transition: transform 0.3s ease;
+}
+.alert:hover {
+  transform: scale(1.02);
+}
