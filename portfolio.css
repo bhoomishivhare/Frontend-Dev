@@ -1,0 +1,10 @@
+/* Center and style portfolio content */
+img {
+  border: 5px solid #fff;
+}
+button {
+  transition: transform 0.3s ease;
+}
+button:hover {
+  transform: scale(1.05);
+}
