@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fafafa;
+  color: #333;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Header */
+header h1 {
+  margin-bottom: 30px;
+  color: #0077b6;
+}
+
+/* Container layout */
+.comparison-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Figure styling */
+figure {
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+figure img {
+  width: 100%;
+  border-radius: 10px;
+  transition: filter 0.5s ease;
+}
+
+/* Filtered image */
+.filtered {
+  filter: brightness(60%);
+}
+
+/* Hover removes filter smoothly */
+.filtered:hover {
+  filter: brightness(100%);
+}
+
+/* Captions */
+figcaption {
+  margin-top: 8px;
+  font-weight: bold;
+}
+
+/* Stack vertically below 700px */
+@media (max-width: 700px) {
+  .comparison-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
