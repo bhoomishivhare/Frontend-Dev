@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Q9 - Multiple jQuery Versions</title>
+  <!-- Load jQuery v1.x (for legacy widget) -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <!-- Load jQuery v3 for modern widget -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="q9.js" defer></script>
+  <style>
+    .widget { padding:8px; border:1px solid #ccc; display:inline-block; margin:6px; }
+    .active { border-color: #007bff; box-shadow:0 0 6px rgba(0,123,255,0.1); }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Multi JQuery Widgets</h1>
+    <div id="legacyWidgets">
+      <div class="widget" id="legacy1">Legacy Carousel 1</div>
+      <div class="widget" id="legacy2">Legacy Carousel 2</div>
+    </div>
+
+    <div id="modernWidgets">
+      <div class="widget" id="modalBtn">Open Modal</div>
+      <div class="widget" id="tooltipArea">Hover me (tooltip)</div>
+    </div>
+  </main>
+</body>
+</html>
