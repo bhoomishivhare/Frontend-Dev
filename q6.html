@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Q6 - Event Subscription</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="q6.js" defer></script>
+  <style>
+    .topic { margin:6px 0; }
+    .success { color:green; margin-top:8px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Subscription Panel</h1>
+
+    <div id="subscriptions">
+      <div class="topic" data-topic="news">
+        <span>News</span>
+        <button class="subscribe">Subscribe</button>
+        <button class="unsubscribe">Unsubscribe</button>
+      </div>
+
+      <div class="topic" data-topic="events">
+        <span>Events</span>
+        <button class="subscribe">Subscribe</button>
+        <button class="unsubscribe">Unsubscribe</button>
+      </div>
+
+      <div class="topic" data-topic="offers">
+        <span>Offers</span>
+        <button class="subscribe">Subscribe</button>
+        <button class="unsubscribe">Unsubscribe</button>
+      </div>
+
+      <div id="dynamicArea"></div>
+
+      <div style="margin-top:8px;">
+        <input id="newTopic" placeholder="New topic name" />
+        <button id="addTopic">Add Topic</button>
+      </div>
+
+      <div id="messages"></div>
+    </div>
+  </main>
+</body>
+</html>
