@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Q3 - Interactive FAQ</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="q3.js" defer></script>
+  <style>
+    .question { padding:8px; border-bottom:1px solid #eee; cursor:pointer; }
+    .answer { display:none; padding:8px 12px; background:#fafafa; }
+    .focused { background:#e8f4ff; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>FAQ</h1>
+    <section id="faq">
+      <article>
+        <h3 class="question">What is your return policy?</h3>
+        <div class="answer">
+          <p>Returns accepted within 30 days.</p>
+          <input type="text" class="answer-input" placeholder="Leave a note..." />
+        </div>
+      </article>
+
+      <article>
+        <h3 class="question">How long is shipping?</h3>
+        <div class="answer">
+          <p>Typically 3-7 business days.</p>
+          <input type="text" class="answer-input" placeholder="Ask more..." />
+        </div>
+      </article>
+
+      <article>
+        <h3 class="question">Do you ship internationally?</h3>
+        <div class="answer">
+          <p>Yes — to many countries.</p>
+          <input type="text" class="answer-input" placeholder="Country?" />
+        </div>
+      </article>
+
+      <article>
+        <h3 class="question">How to contact support?</h3>
+        <div class="answer">
+          <p>Email support@company.com.</p>
+          <input type="text" class="answer-input" placeholder="Message..." />
+        </div>
+      </article>
+
+      <article>
+        <h3 class="question">Are there warranty options?</h3>
+        <div class="answer">
+          <p>Yes — 1 and 2 year plans available.</p>
+          <input type="text" class="answer-input" placeholder="Request warranty" />
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
