@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Q2 - Product Highlight</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="q2.js" defer></script>
+  <style>
+    .product { border:1px solid #ddd; padding:8px; margin:8px; width:200px; display:inline-block; vertical-align:top; position:relative; }
+    .highlight { background: #fff9c4; }
+    .details { display:none; font-size:13px; color:#333; margin-top:6px; }
+    .favorite.selected { color: red; font-weight:bold; }
+    .discount[data-discount] { box-shadow: 0 0 6px rgba(0,150,0,0.1); }
+    .out-of-stock { opacity:0.5; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Products</h1>
+    <section id="products" aria-label="product list">
+      <!-- at least 5 products -->
+      <div class="product" data-stock="10" data-discount="20" data-id="p1">
+        <h3 class="title">Wireless Headset PRO</h3>
+        <button class="favorite">♥</button>
+        <div class="price">$79</div>
+        <div class="details">Battery 30h, Bluetooth 5.0.</div>
+      </div>
+
+      <div class="product" data-stock="0" data-id="p2">
+        <h3 class="title">Portable Speaker</h3>
+        <button class="favorite">♥</button>
+        <div class="price">$49</div>
+        <div class="details">Waterproof, 10W RMS.</div>
+      </div>
+
+      <div class="product" data-stock="5" data-discount="10" data-id="p3">
+        <h3 class="title">Smart Watch</h3>
+        <button class="favorite">♥</button>
+        <div class="price">$129</div>
+        <div class="details">Heart rate monitor.</div>
+      </div>
+
+      <div class="product" data-stock="3" data-id="p4">
+        <h3 class="title">Noise Canceling Earbuds</h3>
+        <button class="favorite">♥</button>
+        <div class="price">$99</div>
+        <div class="details">ANC, case included.</div>
+      </div>
+
+      <div class="product" data-stock="8" data-discount="15" data-id="p5">
+        <h3 class="title">Gaming Mouse</h3>
+        <button class="favorite">♥</button>
+        <div class="price">$59</div>
+        <div class="details">Adjustable DPI, RGB.</div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
