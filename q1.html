@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Q1 - Welcome Greeting</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="q1.js" defer></script>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 16px; }
+    #welcome { padding:12px; border-radius:6px; background:#f3f3f8; display:block; width:100%; max-width:600px; }
+    .hidden { display:none; }
+  </style>
+</head>
+<body>
+  <main>
+    <header><h1>Welcome Page</h1></header>
+    <section id="hero" aria-label="welcome section">
+      <div id="welcome">Welcome visitor!</div>
+      <button id="changeGreeting">Change Greeting</button>
+      <button id="toggleWelcome">Toggle Welcome</button>
+      <p id="timeHint">Current time-based greeting will show on load.</p>
+      <footer><small>Click the greeting text for an alert.</small></footer>
+    </section>
+  </main>
+</body>
+</html>
