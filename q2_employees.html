@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Q2 Employee Dashboard</title>
+  <style>
+    body{font-family:Arial;margin:20px}
+    table{border-collapse:collapse;width:600px}
+    th,td{padding:10px;border-bottom:1px solid #eee;text-align:left}
+    .toggle{cursor:pointer;padding:6px 12px;border-radius:16px;background:#ddd;display:inline-block}
+    .active{background:#4caf50;color:white}
+    .inactive{background:#f44336;color:white}
+    .error{color:#b00020;margin-top:10px}
+  </style>
+</head>
+<body>
+  <h2>Employee Status Dashboard</h2>
+  <div id="error" class="error" style="display:none"></div>
+  <table>
+    <thead><tr><th>Name</th><th>Status</th><th>Action</th></tr></thead>
+    <tbody id="tbody"></tbody>
+  </table>
+
+<script>
+const API = 'http://localhost:3002/employees';
+const tbody = document.getElementById('tbody');
+const errEl = document.getElementById('error');
+
+function showError(msg){
+  errEl.textContent = msg;
+  errEl.style.display = 'block';
+  setTimeout(()=> errEl.style.display='none', 4000);
+}
+
+function fetchEmployees(){
+  const xhr = new XMLHttpRequest();
+  xhr.open('GET', API, true);
+  xhr.onload = function(){
+    if(xhr.status >=200 && xhr.status < 300){
+      const list = JSON.parse(xhr.responseText);
+      render(list);
+    } else {
+      showError('Failed to load employees');
+    }
+  };
+  xhr.onerror = () => showError('Network error while fetching employees');
+  xhr.send();
+}
+
+function render(list){
+  tbody.innerHTML = '';
+  list.forEach(emp => {
+    const tr = document.createElement('tr');
+    const nameTd = document.createElement('td');
+    nameTd.textContent = emp.name;
+    const statusTd = document.createElement('td');
+    statusTd.textContent = emp.status;
+    const actionTd = document.createElement('td');
+
+    const btn = document.createElement('button');
+    btn.className = 'toggle ' + (emp.status === 'active' ? 'active' : 'inactive');
+    btn.textContent = emp.status === 'active' ? 'Active' : 'Inactive';
+
+    btn.addEventListener('click', function(){
+      // optimistic update
+      const oldStatus = emp.status;
+      const newStatus = oldStatus === 'active' ? 'inactive' : 'active';
+      emp.status = newStatus;
+      btn.className = 'toggle ' + (newStatus === 'active' ? 'active' : 'inactive');
+      btn.textContent = newStatus === 'active' ? 'Active' : 'Inactive';
+      statusTd.textContent = newStatus;
+
+      // send PATCH via XHR
+      const patchXhr = new XMLHttpRequest();
+      patchXhr.open('PATCH', API + '/' + emp.id, true);
+      patchXhr.setRequestHeader('Content-Type','application/json;charset=UTF-8');
+      patchXhr.onload = function(){
+        if(!(patchXhr.status >=200 && patchXhr.status<300)){
+          // revert
+          emp.status = oldStatus;
+          btn.className = 'toggle ' + (oldStatus === 'active' ? 'active' : 'inactive');
+          btn.textContent = oldStatus === 'active' ? 'Active' : 'Inactive';
+          statusTd.textContent = oldStatus;
+          showError('Failed to update status on server.');
+        }
+      };
+      patchXhr.onerror = function(){
+        emp.status = oldStatus;
+        btn.className = 'toggle ' + (oldStatus === 'active' ? 'active' : 'inactive');
+        btn.textContent = oldStatus === 'active' ? 'Active' : 'Inactive';
+        statusTd.textContent = oldStatus;
+        showError('Network error while updating status.');
+      };
+      patchXhr.send(JSON.stringify({status: newStatus}));
+    });
+
+    actionTd.appendChild(btn);
+    tr.appendChild(nameTd);
+    tr.appendChild(statusTd);
+    tr.appendChild(actionTd);
+    tbody.appendChild(tr);
+  });
+}
+
+// initial load
+fetchEmployees();
+</script>
+</body>
+</html>
