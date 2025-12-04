@@ -1,0 +1,9 @@
+{
+  "employees": [
+    {"id":1,"name":"Aisha Khan","status":"active"},
+    {"id":2,"name":"Rahul Verma","status":"inactive"},
+    {"id":3,"name":"Maya Rao","status":"active"},
+    {"id":4,"name":"Sahil Patel","status":"inactive"},
+    {"id":5,"name":"Neha Singh","status":"active"}
+  ]
+}
