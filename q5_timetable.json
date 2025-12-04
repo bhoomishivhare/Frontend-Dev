@@ -1,0 +1,9 @@
+{
+  "timetable": [
+    {"id":1,"day":"Monday","subject":"Data Structures","faculty":"Dr. Rao","time":"09:00 - 10:30"},
+    {"id":2,"day":"Monday","subject":"Maths III","faculty":"Prof. Gupta","time":"11:00 - 12:30"},
+    {"id":3,"day":"Tuesday","subject":"Operating Systems","faculty":"Dr. Mehra","time":"09:00 - 10:30"},
+    {"id":4,"day":"Wednesday","subject":"DBMS","faculty":"Ms. Sharma","time":"13:30 - 15:00"},
+    {"id":5,"day":"Friday","subject":"Computer Networks","faculty":"Mr. Verma","time":"10:45 - 12:15"}
+  ]
+}
