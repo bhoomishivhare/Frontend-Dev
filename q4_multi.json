@@ -1,0 +1,14 @@
+{
+  "users": [
+    {"id":1,"name":"User A"},{"id":2,"name":"User B"},{"id":3,"name":"User C"},
+    {"id":4,"name":"User D"},{"id":5,"name":"User E"}
+  ],
+  "orders": [
+    {"id":1,"amount":1200},{"id":2,"amount":500},{"id":3,"amount":750},
+    {"id":4,"amount":2200},{"id":5,"amount":60}
+  ],
+  "products": [
+    {"id":1,"name":"Prod 1"},{"id":2,"name":"Prod 2"},{"id":3,"name":"Prod 3"},
+    {"id":4,"name":"Prod 4"},{"id":5,"name":"Prod 5"}
+  ]
+}
