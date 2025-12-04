@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Q1 Live Search</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body{font-family:Arial;margin:20px}
+    .search-box{width:360px;padding:8px}
+    .loading{display:inline-block;margin-left:10px}
+    .product{display:flex;align-items:center;padding:8px;border-bottom:1px solid #eee}
+    .product img{width:60px;height:60px;object-fit:cover;margin-right:12px;border-radius:6px}
+    .no{padding:12px;color:#666}
+  </style>
+</head>
+<body>
+  <h2>Live Products Search</h2>
+  <input id="search" class="search-box" placeholder="Search products..."/>
+  <span id="loading" class="loading" style="display:none">Loading...</span>
+  <div id="results" style="margin-top:16px;max-width:520px"></div>
+
+<script>
+$(function(){
+  const API = 'http://localhost:3001/products';
+  let timer = null;
+
+  function renderProducts(items){
+    const $r = $('#results').empty();
+    if(!items || items.length===0){
+      $r.append('<div class="no">No products found</div>');
+      return;
+    }
+    items.forEach(p=>{
+      const el = $(`
+        <div class="product">
+          <img src="${p.image}" alt="${p.name}"/>
+          <div>
+            <div style="font-weight:600">${p.name}</div>
+            <div>₹ ${p.price}</div>
+          </div>
+        </div>`);
+      $r.append(el);
+    });
+  }
+
+  function search(q){
+    $('#loading').show();
+    $.ajax({
+      url: API,
+      data: { q: q },
+      method: 'GET',
+      success: function(data){
+        renderProducts(data);
+      },
+      error: function(){
+        $('#results').html('<div class="no">Error loading results</div>');
+      },
+      complete: function(){
+        $('#loading').hide();
+      }
+    });
+  }
+
+  $('#search').on('input', function(){
+    const val = $(this).val().trim();
+    clearTimeout(timer);
+    // debounce 250ms
+    timer = setTimeout(()=> search(val), 250);
+    if(val === '') {
+      // fetch all when empty
+      timer = setTimeout(()=> search(''), 250);
+    }
+  });
+
+  // initial load: show all
+  search('');
+});
+</script>
+</body>
+</html>
