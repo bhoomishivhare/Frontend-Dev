@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Q3 Task Manager</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body{font-family:Arial;margin:20px}
+    .controls{margin-bottom:12px}
+    .task{padding:8px;border-bottom:1px solid #eee;display:flex;align-items:center;justify-content:space-between;width:700px}
+  </style>
+</head>
+<body>
+  <h2>Task Manager</h2>
+  <div class="controls">
+    <label>Sort / Filter:
+      <select id="filter">
+        <option value="">-- All --</option>
+        <option value="priority=Low">Low Priority</option>
+        <option value="priority=Medium">Medium Priority</option>
+        <option value="priority=High">High Priority</option>
+        <option value="completed=true">Completed</option>
+      </select>
+    </label>
+  </div>
+  <div id="list"></div>
+
+<script>
+$(function(){
+  const API = 'http://localhost:3003/tasks';
+
+  function loadList(queryStr){
+    $('#list').html('Loading...');
+    const url = queryStr ? API + '?' + queryStr : API;
+    $.ajax({
+      url: url,
+      method: 'GET',
+      success: function(data){
+        render(data);
+      },
+      error: function(){ $('#list').html('<div style="color:red">Failed to load tasks</div>'); }
+    });
+  }
+
+  function render(tasks){
+    const $l = $('#list').empty();
+    if(tasks.length === 0) { $l.html('<div>No tasks</div>'); return; }
+    tasks.forEach(t=>{
+      const $task = $(`
+        <div class="task" data-id="${t.id}">
+          <div>
+            <strong>${t.title}</strong> <small>(${t.priority})</small>
+          </div>
+          <div>
+            <label>
+              <input type="checkbox" class="complete" ${t.completed ? 'checked' : ''}/>
+              Completed
+            </label>
+          </div>
+        </div>`);
+      $l.append($task);
+    });
+  }
+
+  // initial load
+  loadList('');
+
+  $('#filter').on('change', function(){
+    const val = $(this).val();
+    loadList(val);
+  });
+
+  // delegate checkbox change -> PATCH toggle
+  $('#list').on('change', '.complete', function(){
+    const $task = $(this).closest('.task');
+    const id = $task.data('id');
+    const newCompleted = this.checked;
+    // optimistically update UI (checkbox already changed)
+    $.ajax({
+      url: API + '/' + id,
+      method: 'PATCH',
+      contentType: 'application/json',
+      data: JSON.stringify({ completed: newCompleted }),
+      success: function(){ /* nothing extra */ },
+      error: function(){
+        // revert checkbox
+        $(this).prop('checked', !newCompleted);
+        alert('Failed to update task. Reverting.');
+      }.bind(this)
+    });
+  });
+
+});
+</script>
+</body>
+</html>
