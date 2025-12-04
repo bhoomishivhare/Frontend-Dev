@@ -1,0 +1,9 @@
+{
+  "products": [
+    {"id":1,"name":"Classic Leather Bag","price":2499,"image":"https://via.placeholder.com/80?text=Bag"},
+    {"id":2,"name":"Wireless Headphones","price":3999,"image":"https://via.placeholder.com/80?text=Headphone"},
+    {"id":3,"name":"Water Bottle 1L","price":499,"image":"https://via.placeholder.com/80?text=Bottle"},
+    {"id":4,"name":"Denim Jacket","price":1999,"image":"https://via.placeholder.com/80?text=Jacket"},
+    {"id":5,"name":"Smartwatch S2","price":5999,"image":"https://via.placeholder.com/80?text=Watch"}
+  ]
+}
